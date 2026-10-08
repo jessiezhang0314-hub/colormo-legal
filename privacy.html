@@ -34,16 +34,17 @@ footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--line);color:v
 </head>
 <body>
 <div class="wrap">
-<nav class="nav"><a href="index.html">首页</a><a href="privacy.html">隐私政策</a><a href="terms.html">用户协议</a></nav>
+<nav class="nav"><a href="index.html">首页</a><a href="privacy.html">隐私政策</a><a href="terms.html">用户协议</a><a href="member.html">会员协议</a></nav>
 <h1>「ColorMo」隐私政策</h1>
-<p><strong>发布日期：2026 年 10 月 7 日</strong>
-<strong>生效日期：2026 年 10 月 7 日</strong>
+<p><strong>发布日期：2026 年 10 月 8 日</strong>
+<strong>生效日期：2026 年 10 月 8 日</strong>
 <strong>版本号：v1.0</strong></p>
 <hr />
 <h2>写在前面</h2>
 <p>「ColorMo」（以下简称"本应用"）由 <strong>张婕妤</strong>（以下简称"我们"）独立开发和运营。本应用把你照片里的颜色整理成卡片、月度相册和 Story。我们深知个人信息对你的重要性，所以先把结论放在最前面：</p>
 <ol>
-<li><strong>本应用不需要注册，不收集你的姓名、手机号、身份证件、位置、通讯录、短信、通话记录和剪贴板内容。</strong></li>
+<li><strong>本应用不需要注册，不收集你的姓名、手机号、身份证件、通讯录、短信、通话记录和剪贴板内容，也不获取你设备的实时定位。</strong></li>
+<li><strong>经你授权后，本应用会读取你选中照片里记录的拍摄地点</strong>，换算成城市 / 区县名称显示在卡片上。换算由系统的地理编码服务完成（坐标会发给该服务，见 3.2）；坐标本身不保存，也不会发送给我们。</li>
 <li><strong>本应用不读取你的整个相册。</strong> 只有你在系统照片选择器里<strong>亲手选中</strong>的照片，本应用才能读到，而且只在你的设备上处理，不会上传给我们。</li>
 <li><strong>你制作的卡片、月度相册和 Story，默认只保存在你自己的设备上。</strong> 我们没有服务器主动收集它们。</li>
 <li><strong>只有在你购买会员、并在系统"设置-云空间"中主动开启同步之后</strong>，你的作品才会同步到<strong>你自己的华为云空间</strong>（中国境内），用于在你登录同一华为帐号的设备之间保持一致。这份数据存放在你自己的云空间里，<strong>我们没有服务器、也无法读取或删除它</strong>；你可以随时在"设置-云空间"中关闭同步并删除云端数据。</li>
@@ -78,8 +79,14 @@ footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--line);color:v
 <td><strong>仅本机</strong></td>
 </tr>
 <tr>
+<td>照片拍摄地点</td>
+<td>照片自带的拍摄坐标（EXIF 信息，<strong>需你授权「访问媒体位置」</strong>）</td>
+<td>换算成地名（如「东城区 · 北京」）显示在卡片与 Story 上</td>
+<td>坐标<strong>不保存</strong>，只保留换算出的地名；换算时坐标会发送给系统地理编码服务（见 3.2）</td>
+</tr>
+<tr>
 <td>你的作品</td>
-<td>你制作的卡片、Story、编辑参数（模板、颜色、文字等）及其图片</td>
+<td>你制作的卡片、Story、编辑参数（模板、颜色、文字、地名等）及其图片</td>
 <td>展示月度相册与 Story、支持继续编辑</td>
 <td><strong>仅本机</strong></td>
 </tr>
@@ -100,7 +107,8 @@ footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--line);color:v
 <li><strong>同步开关不在本应用内，而在系统"设置-云空间"中。</strong> 本应用只能显示当前的同步状态，并提供跳转入口；开启与关闭由你在系统设置中完成。</li>
 <li><strong>数据存放在你自己的华为云空间中，占用你的云空间容量。</strong> 我们不运营任何服务器，<strong>既不经手也无法读取、导出或删除这份数据</strong>。</li>
 <li>同步过程由 HarmonyOS 系统能力（ArkData 端云数据同步、端云文件协同）与华为云空间完成，<strong>我们不会获取你的华为帐号信息</strong>（包括帐号标识、密码、真实姓名、手机号、头像）。帐号识别与数据归属由系统处理，本应用无从接触。</li>
-<li><strong>你在相册里的原照片不会被同步</strong>；同步的是你做成的作品及其图片。</li>
+<li><strong>你在相册里的原照片不会被同步</strong>；同步的是你做成的作品及其图片。其中 Story 为了支持之后换模板、再次编辑，会保存一份<strong>压缩后的照片副本</strong>，它会随 Story 一起同步。</li>
+<li><strong>实况照片的视频、动态作品的视频不会同步</strong>，只保存在本机。</li>
 <li>这项功能<strong>默认关闭</strong>，且仅在你购买会员后可用。</li>
 <li>该功能依赖系统能力，要求设备为 <strong>HarmonyOS 6.1 及以上版本</strong>并安装华为云空间服务。</li>
 </ul>
@@ -123,12 +131,18 @@ footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--line);color:v
 <tr>
 <td>网络访问</td>
 <td><code>ohos.permission.INTERNET</code></td>
-<td>仅用于会员购买、云同步、打开应用市场评分页</td>
-<td>无法购买会员、无法使用云同步；制作与保存作品不受影响</td>
+<td>会员购买、云同步、打开应用市场评分页、把照片拍摄坐标换算成地名</td>
+<td>无法购买会员、无法使用云同步；地名只能按内置的少数城市粗略显示；制作与保存作品不受影响</td>
+</tr>
+<tr>
+<td>访问媒体位置</td>
+<td><code>ohos.permission.MEDIA_LOCATION</code></td>
+<td>读取你选中照片里记录的拍摄地点，在卡片上显示地名。第一次选照片时由系统弹窗询问</td>
+<td>卡片上不显示拍摄地点，其他功能不受影响；之后可在系统设置中随时开启或关闭</td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>本应用不申请相机、麦克风、定位、通讯录、相册读写等权限。</strong> 以下操作<strong>不需要申请任何权限</strong>，由鸿蒙系统控件在你点击时一次性完成：</p>
+<p><strong>本应用不申请相机、麦克风、设备定位、通讯录、相册读写等权限。</strong> 以下操作<strong>不需要申请任何权限</strong>，由鸿蒙系统控件在你点击时一次性完成：</p>
 <ul>
 <li><strong>选择照片</strong>：通过系统照片选择器完成，你选中哪几张，我们才能读到哪几张，无法浏览或读取你相册中的其他内容。</li>
 <li><strong>保存作品到相册</strong>：通过系统"保存"安全控件或系统确认框完成，我们不会获得访问你相册的能力，也无法读取相册中的任何内容。</li>
@@ -138,7 +152,8 @@ footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--line);color:v
 <p>我们<strong>不会</strong>收集以下信息，本应用中也不存在相应的代码：</p>
 <ul>
 <li>你的姓名、手机号码、邮箱、身份证件号、生物识别信息</li>
-<li>地理位置信息（含照片中记录的拍摄地点、设备的精确与模糊位置）</li>
+<li>设备的精确与模糊位置（本应用不申请定位权限）</li>
+<li>照片拍摄坐标本身（仅用于在本机换算地名，换算后即丢弃，不保存、不发送给我们）</li>
 <li>通讯录、通话记录、短信、日历</li>
 <li>你未主动选中的相册内容</li>
 <li>剪贴板内容</li>
@@ -190,6 +205,13 @@ footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--line);color:v
 <td>"波点海报"模板识别照片主体</td>
 <td>你选中的照片，<strong>仅在设备端处理，不联网</strong></td>
 <td>仅当你使用该模板</td>
+</tr>
+<tr>
+<td>地理编码服务（Location Kit 逆地理编码）</td>
+<td>华为软件技术有限公司</td>
+<td>把照片拍摄坐标换算成地名</td>
+<td>照片的拍摄坐标（经纬度）</td>
+<td>仅当你授权「访问媒体位置」、照片带有拍摄地点，且你已同意本政策</td>
 </tr>
 <tr>
 <td>华为应用市场（AppGallery Kit）</td>
